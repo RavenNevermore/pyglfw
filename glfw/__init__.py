@@ -541,7 +541,7 @@ def OpenWindowHint(target, hint):
     return _glfwdll.glfwOpenWindowHint(target, hint)
     
 
-def OpenWindow(width, height, redbits, greenbits, bluebits, alphabits, depthbits, stencilbits, mode):
+def OpenWindow(width, height, redbits=0, greenbits=0, bluebits=0, alphabits=0, depthbits=0, stencilbits=0, mode=WINDOW):
     if not _is_real(width) or not _is_real(height):
         raise TypeError("width and height must be numbers")
         
